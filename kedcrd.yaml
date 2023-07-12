@@ -1,0 +1,68 @@
+apiVersion: keda.sh/v1alpha1
+kind: KedaController
+metadata:
+  creationTimestamp: '2023-07-11T06:26:31Z'
+  finalizers:
+    - finalizer.kedacontroller.keda.sh
+  generation: 1
+  managedFields:
+    - apiVersion: keda.sh/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          .: {}
+          'f:admissionWebhooks':
+            .: {}
+            'f:logEncoder': {}
+            'f:logLevel': {}
+          'f:metricsServer':
+            .: {}
+            'f:logLevel': {}
+          'f:operator':
+            .: {}
+            'f:logEncoder': {}
+            'f:logLevel': {}
+          'f:watchNamespace': {}
+      manager: Mozilla
+      operation: Update
+      time: '2023-07-11T06:26:31Z'
+    - apiVersion: keda.sh/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:finalizers':
+            .: {}
+            'v:"finalizer.kedacontroller.keda.sh"': {}
+      manager: manager
+      operation: Update
+      time: '2023-07-11T06:26:31Z'
+    - apiVersion: keda.sh/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          .: {}
+          'f:phase': {}
+          'f:reason': {}
+          'f:version': {}
+      manager: manager
+      operation: Update
+      subresource: status
+      time: '2023-07-11T06:26:31Z'
+  name: keda
+  namespace: openshift-keda
+  resourceVersion: '50304'
+  uid: 3923ba32-99bf-4717-95b5-49cca4b54c9c
+spec:
+  admissionWebhooks:
+    logEncoder: console
+    logLevel: info
+  metricsServer:
+    logLevel: '0'
+  operator:
+    logEncoder: console
+    logLevel: info
+  watchNamespace: ''
+status:
+  phase: Installation Succeeded
+  reason: KEDA v2.10.1 is installed in namespace 'openshift-keda'
+  version: 2.10.1
